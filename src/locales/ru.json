@@ -1,0 +1,216 @@
+{
+  "pageNotFound": "Упс! Страница не найдена",
+  "navbar": {
+    "home": "Главная",
+    "katalog": "Каталог",
+    "favorite": "Избранное",
+    "cartList": "Корзина",
+    "profile": "Кабинет"
+  },
+  "pages": {
+    "searchNotFound": {
+      "headerTitle": "Соответствующий товар не найден",
+      "paragrafTitle": "Попробуйте выполнить поиск заново"
+    },
+    "filterNotfound": {
+      "headerTitle": "Соответствующий товар не найден",
+      "paragrafTitle": "Попробуйте изменить или сбросить фильтры"
+    },
+    "productNotFound": {
+      "headerTitle": "На данный момент категория отсутствует",
+      "paragrafTitle": "Мы сообщим вам, когда категории появятся"
+    },
+    "cartList": {
+      "orderCreate": "Оформить заказ",
+      "notFoundh1": "Ваша корзина пока пуста",
+      "notFoundP": "Начните с главной страницы — вы можете найти нужный товар через поиск или посмотреть подборки"
+    },
+    "favorite": {
+      "myFavorite": "Мои желания",
+      "notFoundh1": "Добавьте понравившееся",
+      "notFoundP": "Перейдите на главную страницу и нажмите на значок ♡ рядом с товаром"
+    }
+  },
+  "profile": {
+    "title": "Личный кабинет",
+    "orders": {
+      "title": "Мои заказы",
+      "allOrder": "Все мои заказы",
+      "noOrder": "Заказов нет",
+      "active": "Активные",
+      "statusOrders": {
+        "created": "Создан",
+        "waitingpay": "Ожидается оплата",
+        "ordered": "Заказано",
+        "accepted": "Принят",
+        "prepared": "Подготовка",
+        "sent": "Отправлен",
+        "delivered": "Доставлен",
+        "cancelled": "Отменен",
+        "ready": "Заказ готов",
+        "deliverUser": "Выдан покупателю"
+      },
+      "cartOrder": {
+        "idOrder": "ID заказа",
+        "orderTypeName": "Тип заказа",
+        "orderType": {
+          "delivery": "Доставка",
+          "pickup": "Самовывоз"
+        },
+        "orderDate": "Дата заказа",
+        "totalPrice": "Общая сумма",
+        "paymentType": "Тип оплаты",
+        "phone": "Телефон",
+        "userGet": "Получатель",
+        "product": "товар",
+        "totalOrder": "Количество",
+        "orderYour": "Ваш заказ",
+        "price": "Цена",
+        "sendReview": "Оставить отзыв",
+        "comment": {
+          "title": "Отзыв",
+          "rating": "Ваша оценка",
+          "moreTitle": "Отзывы",
+          "noData": "Больше отзывов для скачивания нет.",
+          "comm": "комментарий",
+          "sendComment": "Отправить комментарий"
+        }
+      }
+    },
+    "createAddress": "Новый адрес",
+    "address": "Мои адреса",
+    "punktSend": "Пункты доставки",
+    "information": "Информация",
+    "contactus": "Свяжитесь с нами",
+    "social": "Наши социальные сети",
+    "language": "Язык приложения",
+    "map": {
+      "button": {
+        "change": "Изменить адрес",
+        "create": "Подтвердить адрес"
+      },
+      "onlyRequiredAddress": "На данный момент можно выбрать только территорию Ташкента!"
+    }
+  },
+  "common": {
+    "validation": {
+      "select": "Выберите"
+    },
+    "free": "бесплатно",
+    "color": "Цвет",
+    "total": "Итого",
+    "size": "Размер",
+    "toCartList": "В корзину",
+    "inCartList": "В корзине",
+    "priceOneAmont": "сум/единица",
+    "amount": "шт.",
+    "promocode": "Есть промокод?",
+    "description": "Описание",
+    "popularProduct": "Популярные товары",
+    "promocodevalue": "Промо-код",
+    "saleProduct": "На распродаже",
+    "recomend": "Рекомендуем",
+    "placeholderSearch": "Поиск товаров и категорий",
+    "shopCount": "Купили",
+    "viewAll": "Посмотреть все",
+    "paymentAction": {
+      "button": "Оплатить",
+      "actionTitle": "Заказ №{{paymentId}} принят",
+      "actionDescription": "Для оплаты нажмите на кнопку оплаты"
+    },
+    "cancelAction": {
+      "button": "Отменить",
+      "actionTitle": "Вы уверены, что хотите удалить?",
+      "actionDescription": "Если вы удалите этот товар, восстановить его будет невозможно. Необходимо будет оформить заказ заново!"
+    },
+    "btn": {
+      "cancel": "Отменить",
+      "send": "Отправить",
+      "delete": "Удалить",
+      "apply": "Применить",
+      "watch": "Показать",
+      "clear": "Очистить",
+      "continue": "Продолжить",
+      "pay": "Оплатить",
+      "enter": "Применить"
+    },
+    "currency": "сум"
+  },
+  "filter": {
+    "title": "Фильтр",
+    "price": {
+      "title": "Цена, сум",
+      "min": "от",
+      "max": "до"
+    },
+    "colors": {
+      "select": "Выберите цвет",
+      "colorName": "{{colorName}}"
+    },
+    "sizes": {
+      "select": "Выберите размер"
+    }
+  },
+  "loadingGetData": {
+    "title": "Получение данных",
+    "description": "Пожалуйста, подождите"
+  },
+  "userNotFound": {
+    "title": "Пожалуйста, выйдите из приложения и попробуйте снова"
+  },
+  "description": {
+    "countTitle": "{{count}} комментарий"
+  },
+  "checkOut": {
+    "title": "Оформление заказа",
+    "userData": {
+      "title": "Ваши данные",
+      "firstName": "Имя",
+      "phone": "Телефон",
+      "validate": "Мы пришлем уведомление о статусе заказа на указанный вами телефон."
+    },
+    "getWithMap": {
+      "title": "Способ получения",
+      "delivery": "Доставка",
+      "pickup": "Пункт выдачи"
+    },
+    "paymentSystem": {
+      "title": "Выберите способ оплаты",
+      "payAfter": {
+        "top": "При получении",
+        "bottom": "Можно наличными или картой"
+      }
+    },
+    "products": "Товары в заказе",
+    "productsAmount": "Товары",
+    "promocodeValidate": {
+      "loading": "Загрузка..",
+      "notFound": "Не найдено",
+      "inActive": "Не активен",
+      "alreadyUsed": "Этот промокод был использован",
+      "success": "Принят"
+    },
+    "toPay": "Перейти к оплате"
+  },
+  "cancelActionAddress": {
+    "actionTitle": "Вы действительно хотите удалить?",
+    "actionDescription": "Если вы удалите данные, восстановить их будет невозможно!"
+  },
+  "errors": {
+  "unregistered": {
+    "title": "Регистрация не завершена",
+    "desc": "Вы еще не зарегистрированы или процесс регистрации не завершен",
+    "button": "Зарегистрироваться"
+  },
+  "error": {
+    "title": "Произошла ошибка",
+    "desc": "Извините, произошла ошибка. Пожалуйста, выйдите из приложения и попробуйте снова.",
+    "button": "Выйти из приложения"
+  },
+  "closed": {
+    "title": "Магазин закрыт",
+    "desc": "Спасибо за визит! Наш магазин сейчас закрыт. Пожалуйста, проверьте наше рабочее время: {{startTime}} - {{finishTime}}.",
+    "button": "Выйти из приложения"
+  }
+}
+}

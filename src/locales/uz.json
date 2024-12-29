@@ -1,0 +1,217 @@
+{
+  "pageNotFound": "Voy! Sahifa topilmadi",
+  "navbar": {
+    "home": "Bosh sahifa",
+    "katalog": "Katalog",
+    "favorite": "Yoqtirgan",
+    "cartList": "Savat",
+    "profile": "Kabinet"
+  },
+  "pages": {
+    "searchNotFound": {
+      "headerTitle": "Mos keladigan mahsulot topilmadi",
+      "paragrafTitle": "Qaytadan qidirishga urinib kuring"
+    },
+    "filterNotfound": {
+      "headerTitle": "Mos keladigan mahsulot topilmadi",
+      "paragrafTitle": "Filtrlarni oʻzgartirishga yoki bekor qilishga urinib koʻring"
+    },
+    "productNotFound": {
+      "headerTitle": "Hozircha katergoriya mavjud emas",
+      "paragrafTitle": "Kategoriyalar paydo bulishi bilan sizga habar beramiz"
+    },
+    "cartList": {
+      "orderCreate": "Rasmiylashtirish",
+      "notFoundh1": "Savatingiz hozircha bo‘sh",
+      "notFoundP": "Bosh sahifadan boshlang — kerakli tovarni qidiruv orqali topishingiz yoki to‘plamlarni ko‘rishingiz mumkin"
+    },
+    "favorite": {
+      "myFavorite": "Istaklarim",
+      "notFoundh1": "Sizga yoqqanini qoʻshing",
+      "notFoundP": "Bosh sahifaga oʻting va mahsulotdagi ♡ belgisini bosing"
+    }
+  },
+  "profile": {
+    "title": "Shaxsiy kabinet",
+    "orders": {
+      "title": "Buyurtmalarim",
+      "allOrder": "Barcha buyurtmalarim",
+      "noOrder": "Buyurtma yuq",
+      "active": "Faol",
+      "statusOrders": {
+        "created": "Yaratildi",
+        "waitingpay": "To'lov kutilmoqda",
+        "ordered": "Buyurtma qilingan",
+        "accepted": "Qabul qilingan",
+        "prepared": "Tayyorlanmoqda",
+        "sent": "Jo'natilgan",
+        "delivered": "Yetkazib berildi",
+        "cancelled": "Bekor qilingan",
+        "ready": "Buyurtma tayyor",
+        "deliverUser": "Xaridorga berilgan"
+      },
+      "cartOrder": {
+        "idOrder": "Buyurtma ID raqami",
+        "orderTypeName": "Buyurtma turi",
+        "orderType": {
+          "delivery": "Yetkazib berish",
+          "pickup": "Olib ketish"
+        },
+        "orderDate": "Buyurtma vaqti",
+        "totalPrice": "Umumiy summa",
+        "paymentType": "To'lov turi",
+        "phone": "Telefon",
+        "userGet": "Qabul qiluvchi",
+        "product": "mahsulot",
+        "totalOrder": "Miqdori",
+        "orderYour": "Buyurtmangiz",
+        "price": "Narxi",
+        "sendReview": " Sharh qoldirish",
+        "comment": {
+          "title": "Sharh",
+          "moreTitle": "Sharhlar",
+          "noData": "Yuklash uchun boshqa sharhlar yo'q.",
+          "rating": "Baxoingiz",
+          "comm": "izoh",
+          "sendComment": "Izohni yuborish"
+        }
+      }
+    },
+    "createAddress": "Yangi manzil",
+    "address": "Manzillarim",
+    "punktSend": "Topshirish punktlari",
+    "information": "Ma'lumot",
+    "contactus": "Biz bilan bog'lanish",
+    "social": "Ijtimoiy tarmoqlarimiz",
+    "language": "Dastur tili",
+    "map": {
+      "button": {
+        "change": "Manzilni o'zgartirish",
+        "create": "Manzilni tasdiqlash"
+      },
+      "onlyRequiredAddress": "Xozircha Toshkent hududini tanlay olasiz!"
+    }
+  },
+  "common": {
+    "validation": {
+      "select": "Tanlang"
+    },
+    "color": "Rang",
+    "free": "bepul",
+    "size": "O'lcham",
+    "toCartList": "Savatga",
+    "inCartList": "Savatda",
+    "promocode": "Promokod bromi?",
+    "promocodevalue": "Promokod",
+    "total": "Jami",
+    "priceOneAmont": "so'm/birlik",
+    "amount": "dona",
+    "description": "Tavsifi",
+    "popularProduct": "Ommabop mahsulotlar",
+    "saleProduct": "Savdoda",
+    "recomend": "Tavsiya etamiz",
+    "placeholderSearch": "Mahsulotlar va turkumlar izlash",
+    "shopCount": "Sotib olgan",
+    "viewAll": "Hammasini ko'rish",
+    "paymentAction": {
+      "button": "To'lov qilish",
+      "actionTitle": "№{{paymentId}} buyurtma qabul qilindi",
+      "actionDescription": "To'lov qilish uchun to'lash tugmachasi ustiga bosing"
+    },
+    "cancelAction": {
+      "button": "Bekor qilish",
+      "actionTitle": "Rostan ham uchirmoqchimisiz?",
+      "actionDescription": " Agar bu mahsulotni uchirsangiz qayta tiklashni iloji yuq tiklash qaytadan mahsulotni buyurtma qilishingiz zarur!"
+    },
+    "btn": {
+      "cancel": "Bekor qilish",
+      "send": "Yuborish",
+      "delete": "O'chirish",
+      "apply": "Qullash",
+      "watch": "Ko'rsatish",
+      "clear": "Tozalash",
+      "continue": "Davom etish",
+      "pay": "To'lash",
+      "enter": "Kiritish"
+    },
+    "currency": "so'm"
+  },
+  "filter": {
+    "title": "Filter",
+    "price": {
+      "title": "Narxi, so'm",
+      "min": "dan",
+      "max": "gacha"
+    },
+    "colors": {
+      "select": "Rangni tanlang",
+      "colorName": "{{colorName}}"
+    },
+    "sizes": {
+      "select": "Olchamni tanlang"
+    }
+  },
+  "loadingGetData": {
+    "title": "Ma'lumotlar olinayapti",
+    "description": "iltimos biroz kuting"
+  },
+
+  "userNotFound": {
+    "title": "Iltimos dasturdan chiqib yana bir urinib kuring"
+  },
+  "description": {
+    "countTitle": "{{count}} ta sharh"
+  },
+  "checkOut": {
+    "title": "Buyurtmani rasmiylashtirish",
+    "userData": {
+      "title": "Sizning ma'lumotlaringiz",
+      "firstName": "Ism",
+      "phone": "Telefon",
+      "validate": "Buyurtma holati haqida xabarni ko‘rsatilgan telefon raqamiga yuboramiz."
+    },
+    "getWithMap": {
+      "title": "Qabul qilish usuli",
+      "delivery": "Yetkazib berish",
+      "pickup": "Topshirish punkti"
+    },
+    "paymentSystem": {
+      "title": "To‘lov usulini tanlang",
+      "payAfter": {
+        "top": "Qabul qilishda",
+        "bottom": "Naqd pul yoki kartadan foydalanish mumkin"
+      }
+    },
+    "products": "Buyurtmadagi mahsulotlar",
+    "productsAmount": "Mahsulotlar",
+    "promocodeValidate": {
+      "loading": "Yuklanmoqda..",
+      "notFound": "Topilmadi",
+      "inActive": "Faol emas",
+      "alreadyUsed": "Bu promo-kod ishlatilgan",
+      "success": "Qabul qilindi"
+    },
+    "toPay": "To‘lovga o‘tish"
+  },
+  "cancelActionAddress": {
+    "actionTitle": "Rostan ham o'chirmoqchimisiz?",
+    "actionDescription": " Agar ma'lumotni uchirsangiz qayta tiklashni iloji yuq!"
+  },
+  "errors": {
+    "unregistered": {
+      "title": "Ro'yhatdan O'tish Tugallanmagan",
+      "desc": "Siz hali ro'yhatdan o'tmagansiz yoki ro'yhatdan o'tish jarayoni yakunlanmagan",
+      "button": "Ro'yhatdan O'tish"
+    },
+    "error": {
+      "title": "Nimadir xato ketdi",
+      "desc": "Kechirasiz, qandaydir xatolik yuz berdi. Ilovadan chiqing va qayta urinib ko'ring.",
+      "button": "Ilovadan chiqish"
+    },
+    "closed": {
+      "title": "Do'kon Yopiq",
+      "desc": "Tashrif buyurganingiz uchun rahmat! Bizning do'kon hozirda yopiq. Iltimos, bizning ish vaqti: {{startTime}} dan {{finishTime}} gacha.",
+      "button": "Ilovadan chiqish"
+    }
+  }
+}
