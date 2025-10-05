@@ -104,10 +104,11 @@ export default function Profile() {
       dispatch(setHideSearch({ searchBar: true }));
     };
   }, [dispatch]);
-  const handleChangeLng = (event: string) => {
-    i18n.changeLanguage(event);
-    localStorage.setItem("lang", event);
-    setLang(event);
+const handleChangeLng = (newLang: string) => {
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("lang", newLang);
+    setLang(newLang);
+    window.location.pathname = `/${newLang}${window.location.pathname.replace(/^\/(uz|ru)/, "")}`; // ✅ Sahifani yangi tilda ochish
   };
   const handleDeleteAddress = async (id: number) => {
     setDeleteAddressLoading(true);
