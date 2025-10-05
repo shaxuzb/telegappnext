@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { TelegPage } from "./TelegPage";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
 const ShopClosed = () => {
   const { t } = useTranslation();
   const user = JSON.parse(sessionStorage.getItem("user"));

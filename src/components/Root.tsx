@@ -62,11 +62,11 @@ export function Root({ children }: PropsWithChildren) {
       console.error(err);
     }
   };
-  // useClientOnce(() => {
-  //   init(true);
-  // });
+  useClientOnce(() => {
+    init(true);
+  });
   useEffect(() => {
-    // initSDK();
+    initSDK();
     sendUserData();
   }, []);
   return didMount ? (
