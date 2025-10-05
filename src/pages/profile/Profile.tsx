@@ -158,7 +158,7 @@ const handleChangeLng = (newLang: string) => {
         </div>
         <div>
           <div>
-            <LangLink to={"orders"}>
+            <LangLink to={"profile/orders"}>
               <div className="flex justify-between items-center px-4 text-[#797979] text-lg py-3 border-b">
                 <div className="flex items-center gap-4">
                   <FaShoppingBag />
@@ -170,7 +170,7 @@ const handleChangeLng = (newLang: string) => {
               </div>
             </LangLink>
             <LangLink
-              to={`map/get?lat=${
+              to={`profile/map/get?lat=${
                 siteInfoQuery.data?.pickup_address.longlat.split(",")[0]
               }&long=${siteInfoQuery.data?.pickup_address.longlat
                 .split(",")[1]
@@ -233,7 +233,7 @@ const handleChangeLng = (newLang: string) => {
                             className="p-0 h-auto "
                             onClick={() => {
                               navigate(
-                                `map?long=${item.long_lat.split(",")[1]}&lat=${
+                                `profile/map?long=${item.long_lat.split(",")[1]}&lat=${
                                   item.long_lat.split(",")[0]
                                 }&name=${item.name}&id=${item.id}`
                               );
@@ -276,7 +276,7 @@ const handleChangeLng = (newLang: string) => {
                         </div>
                       </div>
                     ))}
-                  <LangLink to="map">
+                  <LangLink to="profile/map">
                     <div className="flex justify-between items-center border-b py-3 cursor-pointer">
                       <div className="flex items-center gap-4">
                         <Button className="bg-ring/10 h-10 w-10 rounded-full text-ring">

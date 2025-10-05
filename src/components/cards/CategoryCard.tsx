@@ -13,7 +13,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ categoryList }) => {
       className="w-20 aspect-square cursor-pointer"
       title={item[`name_${i18n.language}`]}
     >
-      <LangLink to={`category/${item.id}`}>
+      <LangLink to={`catalog/category/${item.id}`}>
         <div className="rounded-[14px] aspect-square overflow-hidden relative m-1">
           <div className="overlay"></div>
           <img
