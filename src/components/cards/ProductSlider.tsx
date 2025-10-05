@@ -3,7 +3,7 @@ import { FreeMode, Pagination } from "swiper/modules";
 import { ProductSaleProps } from "@/types";
 import { numberSpacing } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-import bigSale from "@/assets/images/bigsale.png";
+import bigSale from "@/assets/images/bigSale.png";
 import LangLink from "../lang/LangLink";
 interface ProductCardProps {
   productSaleData: [] | ProductSaleProps[];
