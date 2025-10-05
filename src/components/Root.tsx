@@ -35,17 +35,17 @@ export function Root({ children }: PropsWithChildren) {
       );
       if (response.data) {
         if (response.data.status === "closed") {
-          window.location.pathname = "/shop-closed";
+          window.location.pathname = "shop-closed";
           setTimeout(() => {
             setDidMount(true);
           }, 1000);
         } else if (response.data.status === "unregistered") {
-          window.location.pathname = "/user-notfound";
+          window.location.pathname = "user-notfound";
           setTimeout(() => {
             setDidMount(true);
           }, 1000);
         } else if (response.data.status === "error") {
-          window.location.pathname = "/error";
+          window.location.pathname = "error";
           setTimeout(() => {
             setDidMount(true);
           }, 1000);
