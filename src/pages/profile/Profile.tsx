@@ -152,7 +152,7 @@ const handleChangeLng = (newLang: string) => {
             </Avatar>
             <div className="flex flex-col gap-1">
               <p className="text-base text-white">{initData.user.firstName}</p>
-              <p className="text-base text-white">{user.user.phone}</p>
+              <p className="text-base text-white">{user.user?.phone}</p>
             </div>
           </div>
         </div>
