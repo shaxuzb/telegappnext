@@ -54,6 +54,7 @@ export function Root({ children }: PropsWithChildren) {
       }
     } catch (err) {
       console.error(err);
+      navigate(`/${lang || "uz"}/error`, { replace: true });
       setDidMount(true);
     }
   };

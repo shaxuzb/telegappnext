@@ -1,29 +1,51 @@
+import { Root } from "@/components/Root";
 import i18n from "@/config/i18n";
-import { Outlet, useParams, Navigate } from "react-router-dom";
+import { Outlet, useParams, Navigate, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const SUPPORTED_LANGS = ["ru", "uz"];
 
 const LangLayout = () => {
   const { lang } = useParams();
-
-  // LocalStorage'dan tilni olish
+  const navigate = useNavigate();
   const storedLang = localStorage.getItem("lang");
 
-  // agar lang URL'da yo‘q yoki noto‘g‘ri bo‘lsa
+  // 1️⃣ URL yo‘q yoki noto‘g‘ri bo‘lsa — localStoragedan yoki default tildan foydalanamiz
   if (!lang || !SUPPORTED_LANGS.includes(lang)) {
-    const redirectLang = storedLang && SUPPORTED_LANGS.includes(storedLang)
-      ? storedLang
-      : "uz"; // default til
+    const redirectLang =
+      storedLang && SUPPORTED_LANGS.includes(storedLang)
+        ? storedLang
+        : "uz";
     return <Navigate to={`/${redirectLang}`} replace />;
   }
 
-  // i18n tilda ishlash uchun o‘rnatamiz
-  if (i18n.language !== lang) {
-    i18n.changeLanguage(lang);
-    localStorage.setItem("lang", lang); // tanlangan tilni saqlash
-  }
+  // 2️⃣ i18n tilni yangilash
+  useEffect(() => {
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+      localStorage.setItem("lang", lang);
+    }
+  }, [lang]);
 
-  return <Outlet />;
+  // 3️⃣ Agar localStoragedagi til o‘zgarsa — sahifani qayta yo‘naltirish (reloadsiz)
+  useEffect(() => {
+    const handleLangChange = (e: StorageEvent) => {
+      if (e.key === "lang" && e.newValue && e.newValue !== lang) {
+        // URLni yangilaymiz, lekin foydalanuvchi o‘sha pageda qoladi
+        const currentPath = window.location.pathname.split("/").slice(2).join("/");
+        navigate(`/${e.newValue}/${currentPath}`, { replace: true });
+      }
+    };
+
+    window.addEventListener("storage", handleLangChange);
+    return () => window.removeEventListener("storage", handleLangChange);
+  }, [lang, navigate]);
+
+  return (
+    <Root>
+      <Outlet />
+    </Root>
+  );
 };
 
 export default LangLayout;
