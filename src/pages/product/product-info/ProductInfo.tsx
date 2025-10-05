@@ -18,7 +18,6 @@ import {
   setAddCartList,
 } from "@/store/features/cartListSlice";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Label } from "@radix-ui/react-label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -27,7 +26,7 @@ import { MdOutlineVolumeOff, MdOutlineVolumeUp } from "react-icons/md";
 import { FreeMode } from "swiper/modules";
 import Rating from "react-rating";
 import { IoStar } from "react-icons/io5";
-import { setHideNav } from "@/store/features/navbarBarSlice";
+import LangLink from "@/components/lang/LangLink";
 const ValidateCardList = z.object({
   size: z.string().min(1, { message: "common.validation.select" }),
   // sizePrice: z.number().min(1, { message: "Tanlang" }),
@@ -349,13 +348,13 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
               })}
             </h1>
             <div>
-              <Link
+              <LangLink
                 to={`/product/review/${productInfoData.id}`}
                 className="flex items-center gap-2 text-sm text-[#797979] font-normal font-mono cursor-pointer"
               >
                 {t("common.viewAll")}
                 <FaChevronRight fontSize={10} />
-              </Link>
+              </LangLink>
             </div>
           </div>
           <div className="ml-3">
@@ -473,12 +472,12 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
               <Button onClick={() => handleAdd()} className="py-0 px-3 h-8">
                 +1
               </Button>
-              <Link to={"/cart-list"}>
+              <LangLink to={"/cart-list"}>
                 <Button className="py-0 px-5 h-8 border border-ring bg-transparent text-ring hover:bg-secondary">
                   <FaCartShopping />
                   {t("common.toCartList")}
                 </Button>
-              </Link>
+              </LangLink>
             </div>
           ) : (
             <Button onClick={() => handleAdd()} className="py-0 px-6 h-8">

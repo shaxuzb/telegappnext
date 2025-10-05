@@ -25,7 +25,6 @@ import { FaHome, FaRegQuestionCircle, FaShoppingBag } from "react-icons/fa";
 import { FaAngleRight, FaPlus, FaRegMap } from "react-icons/fa6";
 import { IoClose, IoShareSocialSharp } from "react-icons/io5";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -46,6 +45,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import useLangNavigate from "@/hooks/useLangNavigate";
+import LangLink from "@/components/lang/LangLink";
 
 const images = [
   {
@@ -70,7 +71,7 @@ export default function Profile() {
   const [deleteAddressLoading, setDeleteAddressLoading] =
     useState<boolean>(false);
   const { initData } = retrieveLaunchParams();
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   const [lang, setLang] = useState(localStorage.getItem("lang") || "uz");
   const user = JSON.parse(sessionStorage.getItem("user"));
   const axiosPrivate = useAxios();
@@ -156,7 +157,7 @@ export default function Profile() {
         </div>
         <div>
           <div>
-            <Link to={"orders"}>
+            <LangLink to={"orders"}>
               <div className="flex justify-between items-center px-4 text-[#797979] text-lg py-3 border-b">
                 <div className="flex items-center gap-4">
                   <FaShoppingBag />
@@ -166,8 +167,8 @@ export default function Profile() {
                   <FaAngleRight />
                 </div>
               </div>
-            </Link>
-            <Link
+            </LangLink>
+            <LangLink
               to={`map/get?lat=${
                 siteInfoQuery.data?.pickup_address.longlat.split(",")[0]
               }&long=${siteInfoQuery.data?.pickup_address.longlat
@@ -183,7 +184,7 @@ export default function Profile() {
                   <FaAngleRight />
                 </div>
               </div>
-            </Link>
+            </LangLink>
             <Drawer>
               <DrawerTrigger asChild>
                 <div className="flex justify-between items-center px-4 text-lg py-3 border-b cursor-pointer text-[#797979]">
@@ -274,7 +275,7 @@ export default function Profile() {
                         </div>
                       </div>
                     ))}
-                  <Link to="map">
+                  <LangLink to="map">
                     <div className="flex justify-between items-center border-b py-3 cursor-pointer">
                       <div className="flex items-center gap-4">
                         <Button className="bg-ring/10 h-10 w-10 rounded-full text-ring">
@@ -287,7 +288,7 @@ export default function Profile() {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </LangLink>
                 </div>
               </DrawerContent>
             </Drawer>
@@ -419,7 +420,7 @@ export default function Profile() {
                 <div className="px-3 pl-5 mt-1">
                   {siteInfoQuery.data &&
                     siteInfoQuery.data.social?.map((item, index) => (
-                      <Link
+                      <LangLink
                         to={item.url}
                         target="_blank"
                         // key={item.id}
@@ -444,7 +445,7 @@ export default function Profile() {
                         <div>
                           <FaAngleRight />
                         </div>
-                      </Link>
+                      </LangLink>
                     ))}
                 </div>
               </DrawerContent>
@@ -473,7 +474,7 @@ export default function Profile() {
                 <div className="px-3 pl-5 mt-1 flex justify-center gap-6 w-full">
                   {siteInfoQuery.data &&
                     siteInfoQuery.data.call?.map((item, index) => (
-                      <Link
+                      <LangLink
                         to={item.url}
                         target="_blank"
                         // key={item.id}
@@ -492,7 +493,7 @@ export default function Profile() {
                             </h1>
                           </div>
                         </div>
-                      </Link>
+                      </LangLink>
                     ))}
                 </div>
               </DrawerContent>

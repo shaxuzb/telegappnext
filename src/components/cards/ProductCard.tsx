@@ -8,8 +8,8 @@ import { numberSpacing } from "@/lib/utils";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { hydrateFavourites, setAddFavourite, setRemoveFavourite } from "@/store/features/favouriteSlice";
 import { hydrateCardList, setAddCartList } from "@/store/features/cartListSlice";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import LangLink from "../lang/LangLink";
 interface ProductCardProps {
   productSaleData: [] | ProductSaleProps[];
 }
@@ -69,7 +69,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ productSaleData }) => {
               </div>
             )}
           </div>
-          <Link to={`/product/${productSaleItem.id}`}>
+          <LangLink to={`/product/${productSaleItem.id}`}>
             <div
               className="w-full card duration-300 cursor-pointer hover:shadow-[0_10px_25px_-16px_#36374040]"
               title={productSaleItem.name}
@@ -160,7 +160,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ productSaleData }) => {
                 </div>
               </div>
             </div>
-          </Link>
+          </LangLink>
         </div>
       ))}
     </div>

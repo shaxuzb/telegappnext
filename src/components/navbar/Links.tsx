@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, useMatch } from "react-router-dom";
+import { useMatch } from "react-router-dom";
+import LangLink from "../lang/LangLink";
 interface LinksProps {
   path: string;
   icon: React.ReactNode;
@@ -12,7 +13,7 @@ const Links = (props: LinksProps) => {
     end: `/${path}`.length === 1,
   });
   return (
-    <Link
+    <LangLink
       to={path}
       className={`flex flex-col items-center cursor-pointer gap-[2px] ${
         matchLink ? "text-ring" : "text-[#A8ABB4]"
@@ -20,7 +21,7 @@ const Links = (props: LinksProps) => {
     >
       {icon}
       <span className={`text-[12px]`}>{title}</span>
-    </Link>
+    </LangLink>
   );
 };
 

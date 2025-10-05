@@ -14,7 +14,7 @@ import {
 import { useAppDispatch } from "@/store/hooks";
 import { closest } from "color-2-name";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import LangLink from "../lang/LangLink";
 interface ProductCardProps {
   cardListData: ProductSaleProps[] | [];
 }
@@ -58,7 +58,7 @@ const ProdcutCardList: React.FC<ProductCardProps> = ({ cardListData }) => {
           </div>
           <div className="flex flex-col gap-2 w-full">
             <div>
-              <h1 className="text-sm"><Link to={`/product/${cardListItem.id}`}>{cardListItem.name}</Link></h1>
+              <h1 className="text-sm"><LangLink to={`/product/${cardListItem.id}`}>{cardListItem.name}</LangLink></h1>
               <div className="flex flex-col mt-2 text-xs">
                 <p className="text-[#A8ABB4]">
                   {t("common.size")}:{" "}

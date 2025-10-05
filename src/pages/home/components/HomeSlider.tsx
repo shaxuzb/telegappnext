@@ -3,11 +3,11 @@
 import { FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ProductBannerProps, ProductCategoryProps } from "@/types";
-import { Link } from "react-router-dom";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQueries } from "@tanstack/react-query";
 import useAxios from "@/hooks/useAxios";
 import { useTranslation } from "react-i18next";
+import LangLink from "@/components/lang/LangLink";
 
 const HomeSlider = () => {
   const {i18n} = useTranslation()
@@ -71,7 +71,7 @@ const HomeSlider = () => {
                   key={index}
                   className=" rounded-[30px] overflow-hidden relative"
                 >
-                 <Link to={bannerItem.link}>
+                 <LangLink to={bannerItem.link}>
                  <div className="cursor-pointer">
                     <div className="overlay"></div>
                     <img
@@ -82,7 +82,7 @@ const HomeSlider = () => {
                       className="!object-contain opacity-100 mix-blend-multiply card-image duration-300 w-full"
                     />
                   </div>
-                 </Link>
+                 </LangLink>
                 </SwiperSlide>
               )
             )}
@@ -142,7 +142,7 @@ const HomeSlider = () => {
                 <div
                   className="!w-20 cursor-pointer"
                 >
-                  <Link to={`/catalog/category/${categoryItem.id}`} className="flex flex-col items-center">
+                  <LangLink to={`/catalog/category/${categoryItem.id}`} className="flex flex-col items-center">
                     <div className="rounded-[14px] w-14 aspect-square overflow-hidden relative m-1">
                       <div className="overlay"></div>
                       <img
@@ -158,7 +158,7 @@ const HomeSlider = () => {
                         {categoryItem[`name_${i18n.language}`]}
                       </p>
                     </div>
-                  </Link>
+                  </LangLink>
                 </div>
               </SwiperSlide>
             ))}

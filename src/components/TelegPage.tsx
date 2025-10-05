@@ -17,7 +17,7 @@ export function TelegPage({ children, back = false }: PropsWithChildren<{
         navigate(-1);
       });
     }
-    backButton.hide();
+    // backButton.hide();
   }, [back,location]);
 
   return <>{children}</>;

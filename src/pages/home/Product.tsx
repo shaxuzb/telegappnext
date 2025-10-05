@@ -4,10 +4,10 @@ import { useQueries } from "@tanstack/react-query";
 import useAxios from "@/hooks/useAxios";
 import SkletonCard from "@/components/skletons/SkletonCard";
 import ProductCard from "@/components/cards/ProductCard";
-import { Link } from "react-router-dom";
 import ProductSlider from "@/components/cards/ProductSlider";
 import { useTranslation } from "react-i18next";
 import { Skeleton } from "@/components/ui/skeleton";
+import LangLink from "@/components/lang/LangLink";
 interface MenuType {
   id: number;
   items: ProductSaleProps[];
@@ -83,13 +83,13 @@ const Product = () => {
                 {item[`title_${i18n.language}`]}
               </h1>
               <div>
-                <Link
+                <LangLink
                   to={`/product/menu/${item.id}`}
                   className="flex items-center text-sm font-medium font-mono cursor-pointer"
                 >
                   {t("common.viewAll")}
                   <FaChevronRight fontSize={13} />
-                </Link>
+                </LangLink>
               </div>
             </div>
             {item.items.length > 0 && (
@@ -118,13 +118,13 @@ const Product = () => {
         <div className="flex justify-between items-center pb-4">
           <h1 className="font-medium font-mono">{t("common.saleProduct")}</h1>
           <div>
-            <Link
+            <LangLink
               to="/product/sale"
               className="flex items-center text-sm font-medium font-mono cursor-pointer"
             >
               {t("common.viewAll")}
               <FaChevronRight fontSize={13} />
-            </Link>
+            </LangLink>
           </div>
         </div>
         {rasprodajaQuery.isLoading && rasprodajaQuery.isFetching ? (

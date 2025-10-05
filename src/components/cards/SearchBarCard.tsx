@@ -6,8 +6,8 @@ import { Pagination } from "swiper/modules";
 import { numberSpacing } from "@/lib/utils";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { hydrateFavourites, setAddFavourite, setRemoveFavourite } from "@/store/features/favouriteSlice";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import LangLink from "../lang/LangLink";
 interface ProductCardProps {
   productSaleData: [] | ProductSaleProps[];
   setModal: (e: boolean)=> void
@@ -61,7 +61,7 @@ const SearchBarCard: React.FC<ProductCardProps> = ({ productSaleData,setModal })
               </div>
             )}
           </div>
-          <Link to={`/product/${productSaleItem.id}`} 
+          <LangLink to={`/product/${productSaleItem.id}`} 
             onClick={()=>{
                 setModal(false)
             }}
@@ -142,7 +142,7 @@ const SearchBarCard: React.FC<ProductCardProps> = ({ productSaleData,setModal })
                 </div>
               </div>
             </div>
-          </Link>
+          </LangLink>
         </div>
       ))}
     </div>

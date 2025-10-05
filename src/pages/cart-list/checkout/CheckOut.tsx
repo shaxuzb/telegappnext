@@ -28,13 +28,13 @@ import { Controller, useForm } from "react-hook-form";
 import { FaBoxOpen, FaTruckArrowRight } from "react-icons/fa6";
 import { PatternFormat } from "react-number-format";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import PaymentDialog from "./PaymentDialog";
 import { closest } from "color-2-name";
 import { FaEdit } from "react-icons/fa";
 import { TelegPage } from "@/components/TelegPage";
 import { useTranslation } from "react-i18next";
+import useLangNavigate from "@/hooks/useLangNavigate";
 const ValidateCardList = z.object({
   name: z.string().min(1, { message: "sakin" }),
   phone: z.string().min(1, { message: "sakin" }),
@@ -63,7 +63,7 @@ const CheckOut = () => {
     loading: false,
     notFound: "",
   });
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   const user = JSON.parse(sessionStorage.getItem("user"));
   const [loading, setLoading] = useState<boolean>(false);
   const [promoPrice, setPromoPrice] = useState<number>(0);

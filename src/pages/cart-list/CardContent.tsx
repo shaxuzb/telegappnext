@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { numberSpacing } from "@/lib/utils";
-import { Link, useNavigate } from "react-router-dom";
 import ProdcutCardList from "@/components/cards/ProdcutCardList";
 import { Button } from "@/components/ui/button";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { hydrateCardList } from "@/store/features/cartListSlice";
 import { useTranslation } from "react-i18next";
+import useLangNavigate from "@/hooks/useLangNavigate";
+import LangLink from "@/components/lang/LangLink";
 
 const CardContent: React.FC = () => {
   const {t} = useTranslation()
@@ -28,7 +29,7 @@ const CardContent: React.FC = () => {
       ) ?? 0
     );
   };
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   return (
     <div>
       {cartListStorage && cartListStorage.length > 0 ? (
@@ -77,9 +78,9 @@ const CardContent: React.FC = () => {
             </p>
           </div>
           <div>
-            <Link to={"/checkout"}>
+            <LangLink to={"/checkout"}>
               <Button>{t("pages.cartList.orderCreate")}</Button>
-            </Link>
+            </LangLink>
           </div>
         </div>
       )}

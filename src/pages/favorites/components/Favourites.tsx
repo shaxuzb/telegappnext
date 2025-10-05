@@ -1,10 +1,10 @@
 import ProductCard from "@/components/cards/ProductCard";
 import { Button } from "@/components/ui/button";
+import useLangNavigate from "@/hooks/useLangNavigate";
 import { hydrateFavourites } from "@/store/features/favouriteSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 
 const Favourites: React.FC = () => {
   const {t} = useTranslation()  
@@ -14,7 +14,7 @@ const Favourites: React.FC = () => {
     const favouritesStorage = JSON.parse(localStorage.getItem("favourites"));
     dispatch(hydrateFavourites(favouritesStorage));
   }, [localStorage.getItem("favourites")]);
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   return (
     <div className="px-5">
       {favourites && favourites.length > 0 ? (

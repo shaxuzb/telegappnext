@@ -9,10 +9,10 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import useAxios from "@/hooks/useAxios";
+import useLangNavigate from "@/hooks/useLangNavigate";
 import { PaymentProps } from "@/types";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 interface PaymentDialogProps {
   open: boolean;
   paymentProps: PaymentProps;
@@ -21,7 +21,7 @@ const PaymentDialog = (props: PaymentDialogProps) => {
   const {t}= useTranslation()
   const { open = false, paymentProps } = props;
   const axiosPrivate = useAxios();
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   const { isFetching, isLoading, data } = useQuery({
     queryKey: ["payment"],
     queryFn: async () => {

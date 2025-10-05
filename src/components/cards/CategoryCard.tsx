@@ -1,7 +1,7 @@
 import { ProductCategoryProps } from "@/types";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import LangLink from "../lang/LangLink";
 interface CategoryCardProps {
   categoryList: ProductCategoryProps[] | [];
 }
@@ -13,7 +13,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ categoryList }) => {
       className="w-20 aspect-square cursor-pointer"
       title={item[`name_${i18n.language}`]}
     >
-      <Link to={`category/${item.id}`}>
+      <LangLink to={`category/${item.id}`}>
         <div className="rounded-[14px] aspect-square overflow-hidden relative m-1">
           <div className="overlay"></div>
           <img
@@ -32,7 +32,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ categoryList }) => {
             {item[`name_${i18n.language}`]}
           </p>
         </div>
-      </Link>
+      </LangLink>
     </div>  
   ));
 };

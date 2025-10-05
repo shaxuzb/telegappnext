@@ -1,6 +1,7 @@
 import { TelegPage } from "@/components/TelegPage";
 import { Button } from "@/components/ui/button";
 import useAxios from "@/hooks/useAxios";
+import useLangNavigate from "@/hooks/useLangNavigate";
 import { setHideNav } from "@/store/features/navbarBarSlice";
 import { setHideSearch } from "@/store/features/searchBarSlice";
 import { useAppDispatch } from "@/store/hooks";
@@ -13,7 +14,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaLocationArrow } from "react-icons/fa6";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 interface AddressProps {
   name: string;
   requiredLocation: boolean;
@@ -27,7 +28,7 @@ interface AddressComponentProps {
 const MapAddress = () => {
   const dispatch = useAppDispatch()
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   const axiosPrivate = useAxios();
   const [queryParams] = useSearchParams();
   const [coordinates, setCoordinates] = useState<[number, number]>([
